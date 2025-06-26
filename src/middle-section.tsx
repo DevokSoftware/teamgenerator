@@ -159,7 +159,9 @@ export function MiddleSection() {
   return (
     <Center flex="1" backgroundColor="gray.100" mt={6} px={{ base: 2, md: 6 }}>
       <VStack gap="6" width="full" maxW="container.lg">
-        <Heading size={{ base: "xl", md: "3xl" }}>Standings</Heading>
+        <Heading size={{ base: "xl", md: "3xl" }} color="black">
+          Standings
+        </Heading>
 
         <Box
           borderRadius="xl"
@@ -171,16 +173,13 @@ export function MiddleSection() {
         >
           <Table.Root key="striped" size="md">
             <Table.Header>
-              <Table.Row
-                bgColor="white.100"
-                fontSize={{ base: "sm", md: "md" }}
-              >
-                <Table.ColumnHeader>Position</Table.ColumnHeader>
-                <Table.ColumnHeader>Player</Table.ColumnHeader>
+              <Table.Row bgColor="white" fontSize={{ base: "sm", md: "md" }}>
+                <Table.ColumnHeader color="black">Position</Table.ColumnHeader>
+                <Table.ColumnHeader color="black">Player</Table.ColumnHeader>
 
-                <Table.ColumnHeader>Goals</Table.ColumnHeader>
-                <Table.ColumnHeader>Assists</Table.ColumnHeader>
-                <Table.ColumnHeader>Wins</Table.ColumnHeader>
+                <Table.ColumnHeader color="black">Goals</Table.ColumnHeader>
+                <Table.ColumnHeader color="black">Assists</Table.ColumnHeader>
+                <Table.ColumnHeader color="black">Wins</Table.ColumnHeader>
                 <Table.ColumnHeader textAlign="middle">Elo</Table.ColumnHeader>
               </Table.Row>
             </Table.Header>
@@ -188,7 +187,7 @@ export function MiddleSection() {
               {standings.map((item) => (
                 <Table.Row
                   key={item.position}
-                  bgColor="white.100"
+                  bgColor="white"
                   fontSize={{ base: "sm", md: "md" }}
                 >
                   <Table.Cell color="teal.600" fontWeight="600">
