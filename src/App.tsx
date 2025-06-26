@@ -6,9 +6,9 @@ import { SidebarProvider } from "./sidebar-context";
 function App() {
   return (
     <SidebarProvider>
-      <Flex minH="100dvh" backgroundColor="gray.100">
+      <Flex minH="100dvh">
         <Box flex="1">
-          <Stack h="full">
+          <Stack h="full" backgroundColor="gray.100">
             <MiddleSection />
           </Stack>
         </Box>
