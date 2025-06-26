@@ -157,21 +157,24 @@ export function MiddleSection() {
     },
   ];
   return (
-    <Center flex="1">
-      <VStack gap="6">
-        <Heading size="3xl">Standings</Heading>
+    <Center flex="1" backgroundColor="gray.100" mt={6} px={{ base: 2, md: 6 }}>
+      <VStack gap="6" width="full" maxW="container.lg">
+        <Heading size={{ base: "xl", md: "3xl" }}>Standings</Heading>
 
         <Box
-          w="full"
           borderRadius="xl"
           boxShadow="xl"
           overflowX="auto"
-          p={4}
+          p={{ base: 2, md: 4 }}
           bgColor="white"
+          width={{ base: "full", md: "1000px" }}
         >
-          <Table.Root key="striped" size="md" w="1000px">
+          <Table.Root key="striped" size="md">
             <Table.Header>
-              <Table.Row bgColor="white.100" fontSize="lg">
+              <Table.Row
+                bgColor="white.100"
+                fontSize={{ base: "sm", md: "md" }}
+              >
                 <Table.ColumnHeader>Position</Table.ColumnHeader>
                 <Table.ColumnHeader>Player</Table.ColumnHeader>
 
@@ -186,7 +189,7 @@ export function MiddleSection() {
                 <Table.Row
                   key={item.position}
                   bgColor="white.100"
-                  fontSize="md"
+                  fontSize={{ base: "sm", md: "md" }}
                 >
                   <Table.Cell color="teal.600" fontWeight="600">
                     {item.position}
