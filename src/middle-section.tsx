@@ -3,29 +3,14 @@ import {
   Center,
   Heading,
   HStack,
-  IconButton,
-  Input,
   Span,
   Table,
   VStack,
 } from "@chakra-ui/react";
-import {
-  FileUploadList,
-  FileUploadRoot,
-  FileUploadTrigger,
-} from "./components/ui/file-button";
-import { InputGroup } from "./components/ui/input-group";
-import {
-  BirthdayIcon,
-  ChartIcon,
-  CodeIcon,
-  EnterIcon,
-  IllustrationIcon,
-  UploadIcon,
-} from "./icons/other-icons";
-import { useState } from "react";
+
+import { BirthdayIcon, ChartIcon } from "./icons/other-icons";
+
 import { Button } from "./components/ui/button";
-import { useColorModeValue } from "./components/ui/color-mode";
 
 interface PromptButtonProps {
   icon?: React.ReactElement;
@@ -43,10 +28,6 @@ function PromptButton(props: PromptButtonProps) {
 }
 
 export function MiddleSection() {
-  const [inputValue, setInputValue] = useState("");
-
-  const bg = useColorModeValue("blue.100", "gray.800");
-
   const standings = [
     {
       id: 1,
