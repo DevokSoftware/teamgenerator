@@ -214,6 +214,12 @@ export function MiddleSection() {
           </Table.Root>
         </Box>
         <HStack gap="2">
+          <Center fontSize="xs" color="gray.400">
+            Win: +3 Elo | Loss: -3 Elo | Matchmaking is based on current player
+            Elo
+          </Center>
+        </HStack>
+        <HStack gap="2">
           <PromptButton
             icon={<BirthdayIcon color="cyan.400" fontSize="lg" />}
             description="Create teams"
@@ -224,13 +230,6 @@ export function MiddleSection() {
           />
 
           <PromptButton description="More" />
-        </HStack>
-
-        <HStack gap="2">
-          <Center fontSize="xs" color="gray.400">
-            Win: +3 Elo | Loss: -3 Elo | Matchmaking is based on current player
-            Elo
-          </Center>
         </HStack>
       </VStack>
     </Center>
