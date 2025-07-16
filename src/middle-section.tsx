@@ -46,16 +46,16 @@ export function MiddleSection() {
     { id: 4, name: "António", wins: 0, matches: 0, elo: 1000 },
     { id: 5, name: "Mesquita", wins: 0, matches: 0, elo: 1000 },
     { id: 6, name: "Rodrigo", wins: 0, matches: 0, elo: 1000 },
-    { id: 7, name: "Gonçalo Pereira", wins: 0, matches: 0, elo: 1000 },
+    { id: 7, name: "Gonçalo P.", wins: 0, matches: 0, elo: 1000 },
     { id: 8, name: "Gameiro", wins: 0, matches: 0, elo: 1000 },
     { id: 9, name: "Manuel", wins: 0, matches: 0, elo: 1000 },
-    { id: 10, name: "Gonçalo Oliveira", wins: 0, matches: 0, elo: 1000 },
+    { id: 10, name: "Gonçalo O.", wins: 0, matches: 0, elo: 1000 },
     { id: 11, name: "JP", wins: 0, matches: 0, elo: 1000 },
-    { id: 12, name: "Gonçalo Pereira 2", wins: 0, matches: 0, elo: 1000 },
+    { id: 12, name: "Gonçalo P. 2", wins: 0, matches: 0, elo: 1000 },
     { id: 13, name: "Rodrigo G.", wins: 0, matches: 0, elo: 1000 },
     { id: 14, name: "Quinaz", wins: 0, matches: 0, elo: 1000 },
     { id: 15, name: "Tiago", wins: 0, matches: 0, elo: 1000 },
-    { id: 16, name: "André Oliveira", wins: 0, matches: 0, elo: 1000 },
+    { id: 16, name: "André O.", wins: 0, matches: 0, elo: 1000 },
     { id: 17, name: "Sérgio", wins: 0, matches: 0, elo: 1000 },
     { id: 18, name: "Storti", wins: 0, matches: 0, elo: 1000 },
     { id: 19, name: "Dani", wins: 0, matches: 0, elo: 1000 },
@@ -181,7 +181,7 @@ export function MiddleSection() {
                     bgColor="white"
                     fontSize={{ base: "sm", md: "md" }}
                   >
-                    <Table.ColumnHeader color="black">Match</Table.ColumnHeader>
+                    <Table.ColumnHeader color="black"></Table.ColumnHeader>
                     <Table.ColumnHeader color="black">
                       Team White
                     </Table.ColumnHeader>
@@ -231,7 +231,7 @@ export function MiddleSection() {
                               w="100%"
                               h="100%"
                             >
-                              <Text lineClamp="2">{whiteNames}</Text>
+                              <Text lineClamp="3">{whiteNames}</Text>
                             </Box>
                           </Tooltip>
                         </Table.Cell>
@@ -251,7 +251,7 @@ export function MiddleSection() {
                               w="100%"
                               h="100%"
                             >
-                              <Text lineClamp="2">{blackNames}</Text>
+                              <Text lineClamp="3">{blackNames}</Text>
                             </Box>
                           </Tooltip>
                         </Table.Cell>
