@@ -5,6 +5,7 @@ import {
   HStack,
   Span,
   Table,
+  Text,
   VStack,
 } from "@chakra-ui/react";
 
@@ -12,6 +13,7 @@ import { ChartIcon } from "./icons/other-icons";
 
 import { Button } from "./components/ui/button";
 import { useState } from "react";
+import { Tooltip } from "@/components/ui/tooltip";
 
 interface PromptButtonProps {
   icon?: React.ReactElement;
@@ -59,7 +61,7 @@ export function MiddleSection() {
     { id: 19, name: "Dani", wins: 0, matches: 0, elo: 1000 },
     { id: 20, name: "Dimitrios", wins: 0, matches: 0, elo: 1000 },
     { id: 21, name: "Lourenço", wins: 0, matches: 0, elo: 1000 },
-    { id: 22, name: "Coen", wins: 0, matches: 0, elo: 1000 },
+    { id: 22, name: "Koen", wins: 0, matches: 0, elo: 1000 },
     { id: 23, name: "Pisco", wins: 0, matches: 0, elo: 1000 },
   ];
 
@@ -209,42 +211,49 @@ export function MiddleSection() {
                           color="teal.600"
                           fontWeight="600"
                           border="transparent"
+                          padding=""
                         >
                           #{match.id}
                         </Table.Cell>
 
-                        <Table.Cell border="transparent">
-                          <Box
-                            bgColor={whiteWon ? "green.100" : "red.100"}
-                            color={whiteWon ? "green.700" : "orange.600"}
-                            fontWeight="500"
-                            borderRadius="xl"
-                            border="1px solid"
-                            borderColor={whiteWon ? "green.600" : "red.400"}
-                            px={3}
-                            py={3}
-                            display="inline-block"
-                            w="100%"
-                          >
-                            {whiteNames}
-                          </Box>
+                        <Table.Cell border="transparent" padding="1">
+                          <Tooltip content={whiteNames}>
+                            <Box
+                              bgColor={whiteWon ? "green.100" : "red.100"}
+                              color={whiteWon ? "green.700" : "orange.600"}
+                              fontWeight="500"
+                              borderRadius="xl"
+                              border="1px solid"
+                              borderColor={whiteWon ? "green.600" : "red.400"}
+                              px={2}
+                              py={2}
+                              display="inline-block"
+                              w="100%"
+                              h="100%"
+                            >
+                              <Text lineClamp="2">{whiteNames}</Text>
+                            </Box>
+                          </Tooltip>
                         </Table.Cell>
 
-                        <Table.Cell border="transparent">
-                          <Box
-                            bgColor={!whiteWon ? "green.100" : "red.100"}
-                            color={!whiteWon ? "green.700" : "orange.600"}
-                            fontWeight="500"
-                            borderRadius="xl"
-                            border="1px solid"
-                            borderColor={!whiteWon ? "green.600" : "red.400"}
-                            px={3}
-                            py={3}
-                            display="inline-block"
-                            w="100%"
-                          >
-                            {blackNames}
-                          </Box>
+                        <Table.Cell border="transparent" padding="1">
+                          <Tooltip content={blackNames}>
+                            <Box
+                              bgColor={!whiteWon ? "green.100" : "red.100"}
+                              color={!whiteWon ? "green.700" : "orange.600"}
+                              fontWeight="500"
+                              borderRadius="xl"
+                              border="1px solid"
+                              borderColor={!whiteWon ? "green.600" : "red.400"}
+                              px={2}
+                              py={2}
+                              display="inline-block"
+                              w="100%"
+                              h="100%"
+                            >
+                              <Text lineClamp="2">{blackNames}</Text>
+                            </Box>
+                          </Tooltip>
                         </Table.Cell>
                       </Table.Row>
                     );
