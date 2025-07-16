@@ -59,6 +59,8 @@ export function MiddleSection() {
     { id: 19, name: "Dani", wins: 0, matches: 0, elo: 1000 },
     { id: 20, name: "Dimitrios", wins: 0, matches: 0, elo: 1000 },
     { id: 21, name: "Lourenço", wins: 0, matches: 0, elo: 1000 },
+    { id: 22, name: "Coen", wins: 0, matches: 0, elo: 1000 },
+    { id: 23, name: "Pisco", wins: 0, matches: 0, elo: 1000 },
   ];
 
   const matches = [
@@ -90,12 +92,12 @@ export function MiddleSection() {
       win: "W",
     },
 
-    // {
-    //   id: 5,
-    //   teamWhite: [2, 4, 14, 3, 5],
-    //   teamBlack: [1, 17, 8, 6, 9],
-    //   win: "B",
-    // },
+    {
+      id: 5,
+      teamWhite: [9, 16, 2, 22, 23],
+      teamBlack: [4, 5, 6, 17, 14],
+      win: "W",
+    },
   ];
 
   //serrano antonio quinaz lost mesquita
@@ -203,26 +205,46 @@ export function MiddleSection() {
                         bgColor="white"
                         fontSize={{ base: "sm", md: "md" }}
                       >
-                        <Table.Cell color="teal.600" fontWeight="600">
+                        <Table.Cell
+                          color="teal.600"
+                          fontWeight="600"
+                          border="transparent"
+                        >
                           #{match.id}
                         </Table.Cell>
 
-                        <Table.Cell
-                          bgColor={whiteWon ? "green.100" : "red.100"}
-                          color={whiteWon ? "green.700" : "orange.600"}
-                          fontWeight="500"
-                          borderRadius="md"
-                        >
-                          {whiteNames}
+                        <Table.Cell border="transparent">
+                          <Box
+                            bgColor={whiteWon ? "green.100" : "red.100"}
+                            color={whiteWon ? "green.700" : "orange.600"}
+                            fontWeight="500"
+                            borderRadius="xl"
+                            border="1px solid"
+                            borderColor={whiteWon ? "green.600" : "red.400"}
+                            px={3}
+                            py={3}
+                            display="inline-block"
+                            w="100%"
+                          >
+                            {whiteNames}
+                          </Box>
                         </Table.Cell>
 
-                        <Table.Cell
-                          bgColor={!whiteWon ? "green.100" : "red.100"}
-                          fontWeight="500"
-                          color={!whiteWon ? "green.700" : "orange.600"}
-                          borderRadius="md"
-                        >
-                          {blackNames}
+                        <Table.Cell border="transparent">
+                          <Box
+                            bgColor={!whiteWon ? "green.100" : "red.100"}
+                            color={!whiteWon ? "green.700" : "orange.600"}
+                            fontWeight="500"
+                            borderRadius="xl"
+                            border="1px solid"
+                            borderColor={!whiteWon ? "green.600" : "red.400"}
+                            px={3}
+                            py={3}
+                            display="inline-block"
+                            w="100%"
+                          >
+                            {blackNames}
+                          </Box>
                         </Table.Cell>
                       </Table.Row>
                     );
