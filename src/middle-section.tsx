@@ -61,8 +61,9 @@ export function MiddleSection() {
     { id: 19, name: "Dani", wins: 0, matches: 0, elo: 1000 },
     { id: 20, name: "Dimitrios", wins: 0, matches: 0, elo: 1000 },
     { id: 21, name: "Lourenço", wins: 0, matches: 0, elo: 1000 },
-    { id: 22, name: "Koen", wins: 0, matches: 0, elo: 1000 },
+    { id: 22, name: "Coen", wins: 0, matches: 0, elo: 1000 },
     { id: 23, name: "Pisco", wins: 0, matches: 0, elo: 1000 },
+    { id: 24, name: "Almeida", wins: 0, matches: 0, elo: 1000 },
   ];
 
   const matches = [
@@ -100,10 +101,14 @@ export function MiddleSection() {
       teamBlack: [4, 5, 6, 17, 14],
       win: "W",
     },
-  ];
 
-  //serrano antonio quinaz lost mesquita
-  // leo sergio gameiro rodrigo manuel
+    {
+      id: 6,
+      teamWhite: [8, 5, 24, 18, 21],
+      teamBlack: [14, 16, 17, 3, 9],
+      win: "W",
+    },
+  ];
 
   // const updatedPlayers = players.map((player) => ({ ...player })); // make a copy to avoid mutating original
 
